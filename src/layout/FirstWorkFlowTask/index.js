@@ -87,7 +87,7 @@ const secondEdges = [
 const initialEdges = [...firstEdges, ...secondEdges];
 // end edges
 
-export default function FirstWorkFlow() {
+export default function FirstWorkFlowTask() {
   const [nodes1, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
