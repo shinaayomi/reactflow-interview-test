@@ -93,6 +93,15 @@ const descriptionNode = [
             Interactions with the diagrams trigger updates to the backend,
             saving the diagram state for the project.
           </p>
+          <br />
+          <p>
+            In Reactflow diagram, arrows indicate the flow of actions or
+            interactions between components. Users sign up or log in, then they
+            can manage their projects by creating, updating, and deleting them.
+            Additionally, users can update their profiles. The React Flow
+            diagram is a visual representation of the application's structure
+            and functionality.
+          </p>
         </>
       ),
     },
