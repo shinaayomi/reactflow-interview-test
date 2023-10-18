@@ -134,6 +134,7 @@ const titleEdges = [
       width: 20,
       height: 20,
     },
+    animated: true,
   },
 ];
 
