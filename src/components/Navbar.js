@@ -5,10 +5,10 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link aria-details="first" to="/">
-        First flow task
+        Task 1
       </Link>
       <Link aria-details="first" to="/second">
-        Second flow task
+        Task 2
       </Link>
     </nav>
   );

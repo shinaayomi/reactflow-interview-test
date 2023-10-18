@@ -72,13 +72,46 @@ const projectNodes = [
   },
 ];
 
-const initialNodes = [...userNodes, ...projectNodes, ...titleNodes];
+const descriptionNode = [
+  {
+    id: "description",
+    position: { x: 700, y: 100 },
+    data: {
+      label: (
+        <>
+          <h4>Description</h4>
+          <p>User signs up or logs in to access the application.</p>
+          <p>
+            Upon successful authentication, the user can view their project
+            list.
+          </p>
+          <p>
+            Users can create, view, update, or delete projects, each represented
+            as a React Flow diagram.
+          </p>
+          <p>
+            Interactions with the diagrams trigger updates to the backend,
+            saving the diagram state for the project.
+          </p>
+        </>
+      ),
+    },
+    style: { width: "400px", textAlign: "left" },
+  },
+];
+
+const initialNodes = [
+  ...userNodes,
+  ...projectNodes,
+  ...titleNodes,
+  ...descriptionNode,
+];
 // end nodes
 
 // start edges
 const titleEdges = [
   {
-    id: "e1-5",
+    id: "e1-2",
     source: "title1",
     target: "title2",
     type: "straight",
@@ -97,7 +130,7 @@ const titleEdges = [
 
 const userEdges = [
   {
-    id: "e1-2",
+    id: "e1-3",
     source: "1",
     target: "2",
     markerEnd: {
@@ -107,7 +140,7 @@ const userEdges = [
     },
   },
   {
-    id: "e1-3",
+    id: "e1-4",
     source: "2",
     target: "3",
     markerEnd: {
@@ -120,7 +153,7 @@ const userEdges = [
 
 const projectEdges = [
   {
-    id: "e1-3",
+    id: "e1-5",
     source: "4",
     target: "5",
     markerEnd: {
@@ -130,7 +163,7 @@ const projectEdges = [
     },
   },
   {
-    id: "e1-4",
+    id: "e1-6",
     source: "5",
     target: "6",
     markerEnd: {
