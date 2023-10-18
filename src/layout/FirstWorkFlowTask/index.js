@@ -6,6 +6,7 @@ import ReactFlow, {
   Controls,
   MiniMap,
   Background,
+  MarkerType,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
@@ -75,13 +76,67 @@ const initialNodes = [...firstInitialNodes, ...secondInitialnodes];
 
 // start edges
 const firstEdges = [
-  { id: "e1-2", type: "step", source: "2", target: "5" },
-  { id: "e1-3", type: "step", source: "5", target: "8" },
+  {
+    id: "e1-2",
+    type: "step",
+    source: "2",
+    target: "5",
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+      color: "#dfa348",
+    },
+    style: {
+      strokeWidth: 2,
+      stroke: "#dfa348",
+    },
+  },
+  {
+    id: "e1-3",
+    type: "step",
+    source: "5",
+    target: "8",
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+      color: "#dfa348",
+    },
+    style: {
+      strokeWidth: 2,
+      stroke: "#dfa348",
+    },
+  },
 ];
 
 const secondEdges = [
-  { id: "e1-4", type: "step", source: "9", target: "16" },
-  { id: "e1-5", type: "step", source: "16", target: "11" },
+  {
+    id: "e1-4",
+    type: "step",
+    source: "9",
+    target: "16",
+    style: {
+      strokeWidth: 2,
+      stroke: "#FF0072",
+    },
+  },
+  {
+    id: "e1-5",
+    type: "step",
+    source: "16",
+    target: "11",
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+      color: "#FF0072",
+    },
+    style: {
+      strokeWidth: 2,
+      stroke: "#FF0072",
+    },
+  },
 ];
 
 const initialEdges = [...firstEdges, ...secondEdges];
@@ -112,7 +167,7 @@ export default function FirstWorkFlowTask() {
       >
         <Controls />
         <MiniMap />
-        <Background variant="dots" gap={12} size={1} />
+        <Background variant="lines" gap={10} size={1} />
       </ReactFlow>
     </div>
   );
